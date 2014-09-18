@@ -1,12 +1,24 @@
 package com.trodin.gustav.trmanager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends Activity {
+
+    List<TroubleReport> troubleReports = new ArrayList<TroubleReport>();
+    public static final int ADD_TR_RESULT_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +44,25 @@ public class MainActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == ADD_TR_RESULT_CODE) {
+            Bundle bundle = data.getExtras();
+            TroubleReport troubleReport = bundle.getParcelable("TroubleReport");
+            Log.v("MainActivity", troubleReport.toString());
+            troubleReports.add(troubleReport);
+        }
+        Log.v("MainActivity", "Number of Trouble reports: " + troubleReports.size());
+    }
+
+    public void onAddTrButtonClick(View view) {
+        Intent addTroubleReportIntent = new Intent(this, AddTroubleReport.class);
+        startActivityForResult(addTroubleReportIntent, ADD_TR_RESULT_CODE);
+    }
+
+    public void onAddWeekButtonClick(View view) {
     }
 }

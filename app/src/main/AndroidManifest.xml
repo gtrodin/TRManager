@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ListAllTroubleReports"
+            android:label="@string/title_activity_list_all_tr" >
+        </activity>
+        <activity
+            android:name=".AddTroubleReport"
+            android:label="@string/title_activity_add_trouble_report" >
+        </activity>
     </application>
+
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
 
 </manifest>

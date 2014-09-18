@@ -4,5 +4,13 @@
     <string name="app_name">TR Manager</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="main_add_week_button_text">Add week</string>
+    <string name="main_add_tr_button_text">Add TR</string>
+    <string name="title_activity_list_all_tr">ListAllTr</string>
+    <string name="list_all_tr_button_text">List all TRs</string>
+    <string name="title_activity_add_trouble_report">AddTroubleReport</string>
+    <string name="add_tr_done_button_text">Done</string>
+    <string name="add_tr_header_text">ADD NEW TR</string>
+    <string name="add_tr_tr_id_hint">TR ID</string>
 
 </resources>

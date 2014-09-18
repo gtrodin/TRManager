@@ -6,11 +6,42 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context="com.trodin.gustav.trmanager.MainActivity">
 
     <TextView
-        android:text="@string/hello_world"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/trManagerHeaderText" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_add_tr_button_text"
+        android:id="@+id/addTrButton"
+        android:layout_below="@+id/trManagerHeaderText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:onClick="onAddTrButtonClick" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_add_week_button_text"
+        android:id="@+id/addWeekButton"
+        android:layout_below="@+id/addTrButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="onAddWeekButtonClick" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/list_all_tr_button_text"
+        android:id="@+id/listAllTrButton"
+        android:layout_below="@+id/addWeekButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="onAddWeekButtonClick" />
 
 </RelativeLayout>
